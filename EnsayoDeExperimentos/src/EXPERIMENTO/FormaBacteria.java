@@ -1,0 +1,6 @@
+package EXPERIMENTO;
+
+public enum FormaBacteria {
+	FILAMENTOS, ESFERAS, BARRAS, SACACORCHOS, HELICES
+
+}
