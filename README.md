@@ -39,27 +39,24 @@ Subtipo de Procariota
   -  Orden natural: las bacterias se ordenarán según orden lexicográfico del nombre, en caso de igualdad de nombre a través del orden natural de sus códigos.
 
 <b>Experimento</b>
-Propiedades:
-* Bacteria: de tipo Bacteria, consultable y modificable.
-* Mediciones: lista de Integer para almacenar las mediciones realizadas sobre la bacteria en el experimento. Consultable.
-* Fecha: de tipo LocalDate, consultable.
-Constructores: la clase BacteriaImpl tendrá los siguientes constructores:
-* Un constructor que recibe un valor para cada una de las propiedades.
-* Un constructor que recibe una cadena con el siguiente formato:
-códigoExp:fecha:m1 m2 m3 m4 m5 m6 …
-Cómo ejemplo:
-123:2015-12-03:2 4 5 2 3 1 1 1 1 1 2 4 3 4 3
-Representación como cadena: la representación como cadena de un experimento tendrá el mismo formato que la cadena que recibe el constructor a partir de cadena.
-Criterio de igualdad: dos experimentos serán iguales si sus propiedades son iguales.
++ Propiedades:
+  - Bacteria: de tipo Bacteria, consultable y modificable.
+  - Mediciones: lista de Integer para almacenar las mediciones realizadas sobre la bacteria en el experimento. Consultable.
+  - Fecha: de tipo LocalDate, consultable.
++ Constructores: la clase BacteriaImpl tendrá los siguientes constructores:
+  - Un constructor que recibe un valor para cada una de las propiedades.
+  - Un constructor que recibe una cadena con el siguiente formato: códigoExp:fecha:m1 m2 m3 m4 m5 m6 … Cómo ejemplo: 123:2015-12-03:2 4 5 2 3 1 1 1 1 1 2 4 3 4 3
++ Representación como cadena: la representación como cadena de un experimento tendrá el mismo formato que la cadena que recibe el constructor a partir de cadena.
++ Criterio de igualdad: dos experimentos serán iguales si sus propiedades son iguales.
 
 La interfaz Ensayo tendrá un conjunto de métodos para ofrecer la siguiente funcionalidad:
-1. Dado dos parámetros de tipo cadena con los nombres de dos ficheros que contengan datos de las bacterias utilizadas y los experimentos realizados sobre ella, ver Figura 1 y 2, cargar la información de dichos ficheros.
-2. Calcular el tamaño medio de las bacterias del ensayo realizado.
-3. Devolver la bacteria con mayor diversidad de formas.
-4. Dada una fecha, devolver si todos los experimentos se han realizado con fecha posterior a la dada.
-5. Dada una forma de bacteria f, devolver el nombre de la bacteria con mayor número de experimentos y que tenga entre sus formas f.
-6. Devolver un Map relacionando a cada bacteria con el número de experimentos realizados sobre dicha bacteria.
-7. Dada una fecha, devolver el conjunto de bacterias sobre las que se haya realizado un experimento en dicha fecha ordenado según el código de las bacterias.
-8. Utilizando el ejercicio 6 y el método de la clase utilidad invierteMap, devolver el máximo número de experimentos realizados sobre una bacteria.
-9. Devolver el conjunto de bacterias de todo el ensayo en un Map relacionando a cada bacteria con el mayor valor medio obtenido en su conjunto de experimentos. Nota: para este ejercicio implemente una función que dada una lista de valores reales, devuelva el valor medio de dichos valores.
-10. Dada una fecha y un código de bacteria, devolver si existe o no un experimento sobre esa bacteria y con la fecha dada.
+  1. Dado dos parámetros de tipo cadena con los nombres de dos ficheros que contengan datos de las bacterias utilizadas y los experimentos realizados sobre ella, ver Figura 1 y 2, cargar la información de dichos ficheros.
+  2. Calcular el tamaño medio de las bacterias del ensayo realizado.
+  3. Devolver la bacteria con mayor diversidad de formas.
+  4. Dada una fecha, devolver si todos los experimentos se han realizado con fecha posterior a la dada.
+  5. Dada una forma de bacteria f, devolver el nombre de la bacteria con mayor número de experimentos y que tenga entre sus formas f.
+  6. Devolver un Map relacionando a cada bacteria con el número de experimentos realizados sobre dicha bacteria.
+  7. Dada una fecha, devolver el conjunto de bacterias sobre las que se haya realizado un experimento en dicha fecha ordenado según el código de las bacterias.
+  8. Utilizando el ejercicio 6 y el método de la clase utilidad invierteMap, devolver el máximo número de experimentos realizados sobre una bacteria.
+  9. Devolver el conjunto de bacterias de todo el ensayo en un Map relacionando a cada bacteria con el mayor valor medio obtenido en su conjunto de experimentos. Nota: para este ejercicio implemente una función que dada una lista de valores reales, devuelva el valor medio de dichos valores.
+  10. Dada una fecha y un código de bacteria, devolver si existe o no un experimento sobre esa bacteria y con la fecha dada.
