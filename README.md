@@ -1,36 +1,44 @@
+## Programación orientada a objetos 
+
 El trabajo práctico se enmarca en el análisis de datos de un ensayo o conjunto de experimentos realizados a lo largo de un periodo de tiempo sobre una serie de bacterias, dicho periodo de tiempo puede incluir varios días. Cada experimento consiste en medir la actividad de una colonia de bacterias cinco veces al día durante tres días consecutivos.
 
 A continuación se describen las entidades participantes en el problema, cada una de estas entidades deberán ser modelada como un tipo dentro de la aplicación.
-Organismo Procariota
-Propiedades:
-*  Nombre: de tipo cadena, consultable y modificable.
-Constructores: la clase ProcariotaImpl tendrá dos constructores:
-* Un constructor que recibe un valor para la propiedad nombre.
-* Un constructor por defecto.
-Representación como cadena: la representación como cadena de un organismo procariota tendrá el siguiente formato: Nombre_de_organismo_procariota
-Criterio de igualdad: dos organismos procariota serán iguales si sus nombres son iguales.
-Restricciones: no presenta ningún tipo de restricción.
-FormaBacteria:
-Tipo enumerado que se define a partir de los siguientes valores: FILAMENTOS, ESFERAS, BARRAS, SACACORCHOS, HELICES.
-Bacteria: subtipo de Procariota
-Propiedades adicionales:
-* Código: de tipo entero, consultable.
-* Tamaño: de tipo real, consultable y modificable. Representa el tamaño en micrómetros.
-* Formas de la bacteria: de tipo lista de FormaBacteria, consultable y modificable.
-* Número de formas que posee: propiedad derivada de tipo Integer, consultable.
-Constructores: la clase BacteriaImpl tendrá los siguientes constructores:
-* Un constructor que recibe un valor inicial para el código de la bacteria.
-* Un constructor que recibe un valor para la propiedad nombre y código.
-* Un constructor que recibe una cadena con el siguiente formato:
-nombreBacteria código tamaño forma_1 forma_2 … forma_n
-Otros métodos:
-* Añadir forma: añadir forma determinada a la lista de formas que posee dicha bacteria.
-Restricciones: el tamaño de la bacteria debe estar comprendido entre 0.5 y 5 micrometros. Si no se cumple esta restricción se lanzará la excepción BacteriaNoValidaException.
-Representación como cadena: la representación como cadena de una bacteria tendrá el siguiente formato: nombreBacteria código tamaño[ forma_1, forma_2, … forma_n]
-Criterio de igualdad: dos bacterias serán iguales si son ambas procariotas, sus códigos, tamaño y formas son iguales.
-Orden natural: las bacterias se ordenarán según orden lexicográfico del nombre, en caso de igualdad de nombre a través del orden natural de sus códigos.
 
-Experimento:
+<b>Organismo Procariota</b>
++ Propiedades:
+  - Nombre: de tipo cadena, consultable y modificable.
++ Constructores: la clase ProcariotaImpl tendrá dos constructores:
+  - Un constructor que recibe un valor para la propiedad nombre.
+  - Un constructor por defecto.
++ Representación como cadena: la representación como cadena de un organismo procariota tendrá el siguiente formato: 
+  - Nombre_de_organismo_procariota
++ Criterio de igualdad: 
+  - Dos organismos procariota serán iguales si sus nombres son iguales.
++ Restricciones: 
+  - No presenta ningún tipo de restricción.
++ FormaBacteria:
+  - Tipo enumerado que se define a partir de los siguientes valores: FILAMENTOS, ESFERAS, BARRAS, SACACORCHOS, HELICES.
+
+<b>Bacteria</b>
+
+Subtipo de Procariota
++ Propiedades adicionales:
+  - Código: de tipo entero, consultable.
+  - Tamaño: de tipo real, consultable y modificable. Representa el tamaño en micrómetros.
+  - Formas de la bacteria: de tipo lista de FormaBacteria, consultable y modificable.
+  - Número de formas que posee: propiedad derivada de tipo Integer, consultable.
++ Constructores: la clase BacteriaImpl tendrá los siguientes constructores:
+  - Un constructor que recibe un valor inicial para el código de la bacteria.
+  - Un constructor que recibe un valor para la propiedad nombre y código.
+  - Un constructor que recibe una cadena con el siguiente formato: nombreBacteria código tamaño forma_1 forma_2 … forma_n
++ Otros métodos:
+  - Añadir forma: añadir forma determinada a la lista de formas que posee dicha bacteria.
+  - Restricciones: el tamaño de la bacteria debe estar comprendido entre 0.5 y 5 micrometros. Si no se cumple esta restricción se lanzará la excepción BacteriaNoValidaException.
+  - Representación como cadena: la representación como cadena de una bacteria tendrá el siguiente formato: nombreBacteria código tamaño[ forma_1, forma_2, … forma_n]
+  - Criterio de igualdad: dos bacterias serán iguales si son ambas procariotas, sus códigos, tamaño y formas son iguales.
+  -  Orden natural: las bacterias se ordenarán según orden lexicográfico del nombre, en caso de igualdad de nombre a través del orden natural de sus códigos.
+
+<b>Experimento</b>
 Propiedades:
 * Bacteria: de tipo Bacteria, consultable y modificable.
 * Mediciones: lista de Integer para almacenar las mediciones realizadas sobre la bacteria en el experimento. Consultable.
